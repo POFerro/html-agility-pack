@@ -2351,7 +2351,7 @@ namespace HtmlAgilityPack
 
 			if (quoteType == AttributeValueQuote.Initial && !(att._isFromParse && !att._hasEqual && string.IsNullOrEmpty(att.XmlValue)))
 			{
-				quoteType = att.InternalQuoteType;
+				quoteType = att.InternalQuoteType ?? att.QuoteType;
 			}
 
 			string name;
